@@ -1,6 +1,6 @@
 import time
 import os
-DATABASE_URL = os.environ['hello']
+DATABASE_URL = os.environ['DATABASE_URL']
 
 count=1
 while True:

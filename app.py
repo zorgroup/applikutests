@@ -1,11 +1,12 @@
 import time
-import env  # Import the env package
+from dotenv import load_dotenv
+import os
 
-# Load environment variables
-env.read_envfile()  # Reads from a .env file if it exists
+# Load environment variables from a .env file
+load_dotenv()
 
 # Get the DATABASE_URL from environment variables
-DATABASE_URL = env.get("DATABASE_URL", "Not Set")  # Default to "Not Set" if not found
+DATABASE_URL = os.getenv("DATABASE_URL", "Not Set")
 
 count = 1
 while True:
